@@ -1,0 +1,193 @@
+body {
+  background: #f4f6fa;
+}
+
+.dashboard {
+  max-width: 900px;
+  margin: 48px auto;
+  padding: 0;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  overflow: hidden;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 32px 48px 0 48px;
+  background: #fff;
+}
+
+.searchBar input {
+  width: 320px;
+  padding: 12px 16px;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 8px 0 0 8px;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border 0.2s;
+  background: #f7fafd;
+}
+
+.searchBar input:focus {
+  border-color: #1976d2;
+}
+
+.searchBar button {
+  padding: 12px 28px;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+  font-size: 1.1rem;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.searchBar button:hover {
+  background: #1565c0;
+}
+
+.stockHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background: linear-gradient(90deg, #1976d2 60%, #42a5f5 100%);
+  color: #fff;
+  padding: 36px 48px 28px 48px;
+}
+
+.stockName {
+  font-size: 2.1rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.stockSymbol {
+  font-size: 1.2rem;
+  opacity: 0.85;
+  margin-top: 6px;
+}
+
+.stockPrice {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-align: right;
+}
+
+.sections {
+  display: flex;
+  gap: 32px;
+  padding: 36px 48px 48px 48px;
+}
+
+.section {
+  flex: 1;
+  background: #f7fafd;
+  border-radius: 14px;
+  padding: 28px 24px 24px 24px;
+  box-shadow: 0 2px 12px rgba(25, 118, 210, 0.04);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.section h3 {
+  color: #1976d2;
+  margin-bottom: 18px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #e0e0e0;
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #0d47a1;
+  text-decoration: underline;
+}
+
+.newsTime {
+  font-size: 0.95em;
+  color: #888;
+  margin-top: 4px;
+}
+
+.predictionBox {
+  background: #e3f2fd;
+  color: #1976d2;
+  border-radius: 8px;
+  padding: 24px 0 12px 0;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.07);
+}
+
+.predictionLabel {
+  font-size: 1.1rem;
+  color: #1976d2;
+  opacity: 0.7;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
+@media (max-width: 1100px) {
+  .dashboard {
+    max-width: 98vw;
+  }
+  .sections {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 8vw 32px 8vw;
+  }
+  .stockHeader, .searchBar {
+    padding-left: 8vw;
+    padding-right: 8vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    margin: 0;
+    border-radius: 0;
+  }
+  .sections, .stockHeader, .searchBar {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+  .sections {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .section {
+    padding: 16px 8px 12px 8px;
+  }
+}
